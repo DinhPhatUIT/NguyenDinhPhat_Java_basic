@@ -1,2 +1,2 @@
 # NguyenDinhPhat_Java_basic
-code java basic, assignmen, project
+code java basic, assignment, project
