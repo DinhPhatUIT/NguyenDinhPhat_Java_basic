@@ -2,18 +2,18 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
-package bai02_classdate;
+package Bai02_ClassDate;
 
 /**
  *
  * @author ASUS
  */
 import java.util.*;
-public class ClassDate {
+public class Bai02_ClassDate {
     Scanner sc = new Scanner(System.in);
     private int day, month, year;
-    public ClassDate(){};
-    public ClassDate(int day, int month, int year)
+    public Bai02_ClassDate(){};
+    public Bai02_ClassDate(int day, int month, int year)
     {
         this.day = day;
         this.month = month;
@@ -94,7 +94,7 @@ public class ClassDate {
     public void printDateNormal(){
         System.out.print(this.day+"-"+this.month+"-"+this.year);
     }
-    public ClassDate tangSoNgay(int x){
+    public Bai02_ClassDate tangSoNgay(int x){
         this.day += x;
         if(this.day < 29)
             return this;
@@ -140,7 +140,7 @@ public class ClassDate {
         Scanner sc = new Scanner(System.in);
        //int x, y, z;
         System.out.println("Nhap ngay thang nam:");
-        ClassDate date = new ClassDate();
+        Bai02_ClassDate date = new Bai02_ClassDate();
         while(true){
             date.input();
             if(date.checkDateTrue() == false){
