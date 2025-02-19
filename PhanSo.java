@@ -2,19 +2,19 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
-package PhanSo;
+package Bai01_PhanSo;
 
 /**
  *
  * @author ASUS
  */
 import java.util.*;
-public class PhanSo {
+public class Bai01_PhanSo {
     
     
     private int tuSo, mauSo;
     
-    public PhanSo(int tuSo, int mauSo){
+    public Bai01_PhanSo(int tuSo, int mauSo){
         if(mauSo == 0){
             throw new IllegalArgumentException("Mau so khong the bang 0");
         }
@@ -46,34 +46,34 @@ public class PhanSo {
             this.tuSo = -this.tuSo;
         }
     }
-    public PhanSo congPhanSo(PhanSo a) {
+    public Bai01_PhanSo congPhanSo(Bai01_PhanSo a) {
         int tuMoi = this.tuSo * a.mauSo + a.tuSo * this.mauSo;
         int mauMoi = this.mauSo * a.mauSo;
-        return new PhanSo(tuMoi, mauMoi);
+        return new Bai01_PhanSo(tuMoi, mauMoi);
     }
 
-    public PhanSo truPhanSo(PhanSo a) {
+    public Bai01_PhanSo truPhanSo(Bai01_PhanSo a) {
         int tuMoi = this.tuSo * a.mauSo - a.tuSo * this.mauSo;
         int mauMoi = this.mauSo * a.mauSo;
-        return new PhanSo(tuMoi, mauMoi);
+        return new Bai01_PhanSo(tuMoi, mauMoi);
     }
 
-    public PhanSo nhanPhanSo(PhanSo a) {
+    public Bai01_PhanSo nhanPhanSo(Bai01_PhanSo a) {
         int tuMoi = this.tuSo * a.tuSo;
         int mauMoi = this.mauSo * a.mauSo;
-        return new PhanSo(tuMoi, mauMoi);
+        return new Bai01_PhanSo(tuMoi, mauMoi);
     }
 
-    public PhanSo chiaPhanSo(PhanSo b) {
+    public Bai01_PhanSo chiaPhanSo(Bai01_PhanSo b) {
         if (b.tuSo == 0) {
             throw new ArithmeticException("Khong the chia cho 0");
         }
         int tuMoi = this.tuSo * b.mauSo;
         int mauMoi = this.mauSo * b.tuSo;
-        return new PhanSo(tuMoi, mauMoi);
+        return new Bai01_PhanSo(tuMoi, mauMoi);
     }
     //so sanh 2 phan so return 1 neu >, 0 neu =, -1 neu <
-    public int sosanhPhanSo(PhanSo a){
+    public int sosanhPhanSo(Bai01_PhanSo a){
         int tusoThis = this.tuSo * a.mauSo;
         int tuSo_a = a.tuSo * this.mauSo;
         if(tusoThis > tuSo_a){
@@ -97,17 +97,17 @@ public class PhanSo {
         x = scanner.nextInt();
         System.out.print("Nhap mau so: ");
         y = scanner.nextInt();
-        PhanSo a = new PhanSo(x,y);
+        Bai01_PhanSo a = new Bai01_PhanSo(x,y);
         System.out.println("Nhap phan so thu 2:");
         System.out.print("Nhap tu so: ");
         z = scanner.nextInt();
         System.out.print("Nhap mau so: ");
         t = scanner.nextInt();
-        PhanSo b = new PhanSo(z,t);
-        PhanSo c = a.nhanPhanSo(b);
-        PhanSo d = a.chiaPhanSo(b);
-        PhanSo e = a.congPhanSo(b);
-        PhanSo f = a.truPhanSo(b);
+        Bai01_PhanSo b = new Bai01_PhanSo(z,t);
+        Bai01_PhanSo c = a.nhanBai01_PhanSo(b);
+        Bai01_PhanSo d = a.chiaBai01_PhanSo(b);
+        Bai01_PhanSo e = a.congBai01_PhanSo(b);
+        Bai01_PhanSo f = a.truBai01_PhanSo(b);
         System.out.print("Tich hai phan so la: ");
         c.hienThiPhanSo();
         System.out.print("Thuong hai phan so la: ");
@@ -122,8 +122,6 @@ public class PhanSo {
         else if(cp == 0) System.out.print("Phan so a = Phan so b");
         else System.out.print("Phan so a < Phan so b");
               
-        
-        
     }
     
 }
